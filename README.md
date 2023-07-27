@@ -1,2 +1,2 @@
 # amir-careers-website
-A carreers website for amir
+#A careers website for amir
