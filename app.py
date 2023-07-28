@@ -27,7 +27,7 @@ JOBS = [
     'id': 4,
     'title': 'Backend Eng',
     'location':  'US',
-    'salary': '€ 3500'
+    'salary': '€ 5500'
    }
 
   
