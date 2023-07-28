@@ -18,7 +18,7 @@
 
   <body>
     <div class ="container">
-    <h1 class= "text-center mt-2 mb-4">Amir's Career</h1>
+    <h1 class= "text-center mt-2 mb-4">{{company_name}} Career</h1>
     <img class= "img-fluid" id = "banner" src="https://amir-careers-website--adirin.repl.co/static/career.jpg" >
 
     <h2 class= "text-center mt-2 mb-4">About Amir</h2>
@@ -30,7 +30,29 @@ The purpose of lorem ipsum is to create a natural-looking block of text (sentenc
 The passage experienced a surge in popularity during the 1960s when Letraset used it on their dry-transfer sheets, and again during the 90s as desktop publishers bundled the text with their software. Today it's seen all around the web; on templates, websites, and stock designs. Use our generator to get your own, or read on for the authoritative history of lorem ipsum. </p>
 
     <h2 class= "text-center mt-2 mb-4">Open Positions</h2>
-    <p >To do, show jobs here </p>
+  <div>
+      {% for job in jobs %}
+         <div class= "border-bottom row" style="margin-bottom:16px; padding-bottom:8px">
+           <div class= "col-10">
+              <h4 style = "color: rgb(120,120,120); margin-bottom:4px;">
+             {{job['title']}}</h4>
+              <div>
+                  <b>Location: </b> {{job['location']}}
+              </div>
+          {% if 'salary' in job %}
+             <div>
+                <b>Salary: </b> {{job['salary']}}
+             </div>
+          {% endif %}
+         </div>
+         <div class="col-2">
+             <button type = "button" class = "btn btn-outline-primary">Apply </button>
+          </div> 
+           
+  </div>       
+     {% endfor %}
+      
+    </div>
       <div class= "text-center">
         <button class = "btn btn-primary btn-lg">Contact Us</button>
         <p class = "mt-4"> Copyright 2022, AD </p>
