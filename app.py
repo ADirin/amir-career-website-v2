@@ -20,12 +20,14 @@ JOBS = [
     'id': 3,
     'title': 'UX designer',
     'location':  'HKI, FIN',
-    'salary': '€ 3500'
+    'salary':'',
+    
   },
   {
     'id': 4,
     'title': 'Backend Eng',
     'location':  'US',
+    'salary': '€ 3500'
    }
 
   
@@ -39,6 +41,7 @@ def hello_world():
                            jobs=JOBS,
                           company_name='Amirs')
   #by running nothing has happened since in flash explained how things should be done
+
 
 print(__name__)
 if __name__ == "__main__":
